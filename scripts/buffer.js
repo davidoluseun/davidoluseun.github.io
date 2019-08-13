@@ -78,7 +78,7 @@ closeModal.onclick = function() {
 
 // Keyup event
 
-function keyUpFunction() {
+function keyUpEvent() {
 
   if (keyUpParagraph.innerHTML == 0 && textareaElement.value.length == 250) {
 
@@ -87,12 +87,11 @@ function keyUpFunction() {
  } else {
 
    textareaElement.style = "";
-
- }
-  keyUpParagraph.innerHTML = 250 - textareaElement.value.length;
+   keyUpParagraph.innerHTML = 250 - textareaElement.value.length;
+  }
 }
 
-textareaElement.addEventListener("keyup", keyUpFunction, false);
+textareaElement.addEventListener("keyup", keyUpEvent, false);
 
 // Toggle checkboxes labels
 
