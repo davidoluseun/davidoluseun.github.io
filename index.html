@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel=stylesheet href="css/style.min.css">
-    <script src="scripts/buffer.min.js" defer="true"></script>
+    <link rel=stylesheet href="css/style.css">
+    <script src="scripts/buffer.js" defer></script>
 </head>
 
 <body>
@@ -25,13 +25,34 @@
 
                 <!-- Header's social media contacts -->
                 <span class="social-hd-contact">
-                    <a href="https://www.facebook.com"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    <a href="https://www.twitter.com"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                    <a href="https://www.plus.google.com"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.skype.com"><i class="fab fa-skype" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        <span class="screen-reader">Facebook</span>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <span class="screen-reader">Twitter</span>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        <span class="screen-reader">LinkedIn</span>
+                    </a>
+                    <a href="https://www.plus.google.com" target="_blank">
+                        <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+                        <span class="screen-reader">Google</span>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                        <span class="screen-reader">Youtube</span>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <span class="screen-reader">Instagram</span>
+                    </a>
+                    <a href="https://www.skype.com" target="_blank">
+                        <i class="fab fa-skype" aria-hidden="true"></i>
+                        <span class="screen-reader">Skype</span>
+                    </a>
                 </span>
             </div>
         </div>
@@ -39,27 +60,35 @@
         <!-- Sub-header two -->
         <div class="sub-hd-two-wrap">
             <div class="sub-hd-two clearfix">
-                  <a href="#">
-                    <span class="buffer-logo"><img src="images/buffer-logo.png" alt="buffermedia"></span>
-                  </a>
-
-                <!-- Header search and menu  -->
-                <div class="header-search"><i class="fas fa-search" aria-hidden="true"></i></div>
-                <div class="menu-wrap"><i class="fa fa-bars menu" aria-hidden="true"></i></div>
-
+                <a href="#">
+                    <span class="buffer-logo"><img src="images/buffer-logo.png" alt="Buffermedia | Mobile Solutions For Business"></span>
+                </a>
+                <!-- Header search -->
+                <button type="button" class="header-search-botton">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <span class="screen-reader">Open Search Modal</span>
+                </button>
                 <!-- Search modal -->
                 <div class="search-modal-background"></div>
                 <div class="search-modal">
-                    <form class="modal-form-table" action="index.html" method="post">
+                    <form class="modal-form-table" name="modal-form" action="index.html" method="post">
                         <div class="modal-form-table-cell">
                             <div class="modal-input-wrap">
-                                <label for="modal-input">Just type and press 'enter'</label>
-                                <input type="text" name="modal-search-input" value="" id="modal-input" placeholder="search...">
+                                <label for="modal-search">Just type and press 'enter'</label>
+                                <input type="search" name="modal-search" id="modal-search" placeholder="search...">
                             </div>
                         </div>
                     </form>
-                    <span class="close-modal"><i class="fas fa-times" aria-hidden="true"></i></span>
+                    <button type="button" class="close-modal">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                        <span class="screen-reader">Close Search Modal</span>
+                    </button>
                 </div>
+                <!-- Header menu -->
+                <button type="button" class="menu-botton">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span class="screen-reader">Toggle Navigation</span>
+                </button>
 
                 <!-- Top navigation -->
                 <nav class="top-nav">
@@ -72,7 +101,6 @@
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </nav>
-
             </div>
         </div>
 
@@ -84,11 +112,13 @@
         </div>
     </header>
 
+    <!-- // Main form fills -->
     <main class="main-form-wrap">
-        <section class="main-form">
+        <article class="main-form">
             <div class="col-8">
-                <!-- // Main form fills -->
                 <form name="mainForm" action="index.html" method="post">
+                    <h2>Position</h2>
+                    <!-- Position -->
                     <select name="application-position">
                         <option value="0">--Position Applying for--</option>
                         <option value="sale-and-partnership-manager">Sale & Partnership Manager</option>
@@ -100,191 +130,186 @@
                     </select>
 
                     <!-- Basic info -->
-                    <p><strong>BASIC INFO</strong></p>
-                    <div class="clearfix">
-                        <span class="left-form-element">
-                            <input type="text" name="surname" placeholder="Surname">
-                        </span>
-                        <span class="right-form-element">
-                            <input type="text" name="other-names" placeholder="Other Names">
-                        </span>
-
-                        <span class="left-form-element">
-                            <select name="sex">
-                                <option value="0">--Sex--</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
-                        </span>
-                        <span class="right-form-element">
-                            <select name="marital-status">
-                                <option value="0">--Marital Status--</option>
-                                <option value="single">Single</option>
-                                <option value="married">Married</option>
-                                <option value="seperated">Seperated</option>
-                                <option value="widowed">Widowed</option>
-                            </select>
-                        </span>
-                    </div>
-
-                    <p class="dob">Date of Birth :</p>
-                    <input type="date" name="date-of-birth">
+                    <section>
+                        <h2>Basic info</h2>
+                        <div class="clearfix">
+                            <span class="left-form-element">
+                                <input type="text" name="surname" placeholder="Surname">
+                            </span>
+                            <span class="right-form-element">
+                                <input type="text" name="other-names" placeholder="Other Names">
+                            </span>
+                            <span class="left-form-element">
+                                <select name="sex">
+                                    <option value="0">--Sex--</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </span>
+                            <span class="right-form-element">
+                                <select name="marital-status">
+                                    <option value="0">--Marital Status--</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="seperated">Seperated</option>
+                                    <option value="widowed">Widowed</option>
+                                </select>
+                            </span>
+                        </div>
+                        <label for="dob" class="dob-label">Date of Birth :</label><br>
+                        <input type="date" name="date-of-birth" id="dob">
+                    </section>
 
                     <!-- Contact info -->
-                    <p><strong>CONTACT INFORMATION</strong></p>
-                    <input type="text" name="address1" placeholder="Address (Line 1)">
-                    <input type="text" name="address2" placeholder="Address (Line 2)">
+                    <section>
+                        <h2>Contact Information</h2>
+                        <input type="text" name="address1" placeholder="Address (Line 1)">
+                        <input type="text" name="address2" placeholder="Address (Line 2)">
 
-                    <div class="clearfix">
-                        <div class="left-form-element">
-                            <select name="country">
-                                <option value="0">--Country--</option>
-                                <option value="nigeria">Nigeria</option>
-                                <option value="south africa">South Africa</option>
-                                <option value="ghana">Ghana</option>
-                                <option value="niger">Niger</option>
-                            </select>
-                        </div>
-                        <div class="right-form-element">
-                            <input type="text" name="state" placeholder="State">
-                        </div>
+                        <div class="clearfix">
+                            <div class="left-form-element">
+                                <select name="country">
+                                    <option value="0">--Country--</option>
+                                    <option value="nigeria">Nigeria</option>
+                                    <option value="south africa">South Africa</option>
+                                    <option value="ghana">Ghana</option>
+                                    <option value="niger">Niger</option>
+                                </select>
+                            </div>
 
-                        <div class="left-form-element">
-                            <input type="email" name="email" placeholder="Email">
+                            <div class="right-form-element">
+                                <input type="text" name="state" placeholder="State">
+                            </div>
+                            <div class="left-form-element">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="right-form-element">
+                                <input type="email" name="confirm-email" placeholder="Confirm Email">
+                            </div>
+                            <div class="left-form-element">
+                                <input type="tel" name="phone-number" placeholder="Mobile Number">
+                            </div>
+                            <div class="right-form-element">
+                                <input type="tel" name="alt-phone-number" placeholder="Alternative Number">
+                            </div>
                         </div>
-                        <div class="right-form-element">
-                            <input type="email" name="confirm-email" placeholder="Confirm Email">
-                        </div>
-
-                        <div class="left-form-element">
-                            <input type="tel" name="phone-number" placeholder="Mobile Number">
-                        </div>
-                        <div class="right-form-element">
-                            <input type="tel" name="alt-phone-number" placeholder="Alternative Number">
-                        </div>
-
-                    </div>
+                    </section>
 
                     <!-- Professional Details -->
-                    <p><strong>PROFESSIONAL DETAILS</strong></p>
-                    <select name="professional-details">
-                        <option value="0">--Highest Qualification Held--</option>
-                        <option value="none">None</option>
-                        <option value="bsc">Bachelor of Science (B.sc)</option>
-                        <option value="ba">Bachelor of Arts (BA)</option>
-                        <option value="btech">Bachelor of Technology (B.Tech)</option>
-                        <option value="bpharm">Bachelor of Pharmacy (B.pharm)</option>
-                        <option value="hnd">Higer National Diploma (HND)</option>
-                        <option value="ond">Ordinary National Diploma (OND)</option>
-                        <option value="msc">Master of Science (M.sc)</option>
-                        <option value="ma">Master of Arts (MA)</option>
-                        <option value="mba">Master of Business Administration (MBA)</option>
-                        <option value="dba">Doctor of Business Administration (DBA)</option>
-                        <option value="phd">Doctor of Philosophy (PhD)</option>
-                        <option value="mbbs">Doctor of Medicine (M.B.B.S)</option>
-                        <option value="dpharm">Doctor of Pharmacy (D.Pharm)</option>
-                    </select>
-
-                    <select name="years-of-experience">
-                        <option value="0">--Years of relevant experience: (in position being applied for)--</option>
-                        <option value="none">None</option>
-                        <option value="less-than-1">Less than 1 year</option>
-                        <option value="1-year">1 year</option>
-                        <option value="2-year">2 years</option>
-                        <option value="3-year">3 years</option>
-                        <option value="4-year">4 years</option>
-                        <option value="5-year">5 years</option>
-                        <option value="6+year">6+ years</option>
-                    </select>
-
-                    <div class="clearfix">
-                        <div class="left-form-element" >
-                            <input type="text" name="current-employer" placeholder="Current Employer">
-                        </div>
-                        <div class="right-form-element">
-                            <input type="text" name="location" placeholder="Location">
-                        </div>
-                    </div>
-
-                    <div>
-                        <input type="text" name="present-job-title" placeholder="Present Job Title (required)">
-                    </div>
-
-                    <div>
-                        <textarea maxlength="250" name="achievements" placeholder="Achievements"></textarea>
-                    </div>
-
-                    <p id="keypress-para">250</p>
-
-                    <div>
-                        <select name="current-salary">
-                            <option value="0">--Current Annual Salary (in NGN)--</option>
-                            <option value="less-than-100,000">Less than 100,000 p.a</option>
-                            <option value="100,001-150,000">100,001 - 150,000 p.a</option>
-                            <option value="150,001-200,000">150,001 - 200,000 p.a</option>
-                            <option value="200,001-250,001">200,001 - 250,001 p.a</option>
-                            <option value="250,001-300,001">250,001 - 300,001 p.a</option>
-                            <option value="250,001-300,00">250,001 - 300,001 p.a</option>
-                            <option value="250,001-300,001">250,001 - 300,001 p.a</option>
-                            <option value="300,001-400,001">300,001 - 400,001 p.a</option>
-                            <option value="400,001-500,001">400,001 - 500,001 p.a</option>
-                            <option value="500,001-600,001">500,001 - 600,001 p.a</option>
-                            <option value="600,001-700,001">600,001 - 700,001 p.a</option>
-                            <option value="700,001-800,001">700,001 - 800,001 p.a</option>
-                            <option value="800,001-900,001">800,001 - 900,001 p.a</option>
-                            <option value="900,001-10,000,000">900,001 - 10,000,001 p.a</option>
-                            <option value="10,000,001-12,000,001">10,000,001 - 12,000,001 p.a</option>
-                            <option value="12,000,001-15,000,001">12,000,001 - 15,000,001 p.a</option>
-                            <option value="15,000,001-and-above">15,000,001 and above p.a</option>
+                    <section>
+                        <h2>Professional Details</h2>
+                        <select name="professional-details">
+                            <option value="0">--Highest Qualification Held--</option>
+                            <option value="none">None</option>
+                            <option value="bsc">Bachelor of Science (B.sc)</option>
+                            <option value="ba">Bachelor of Arts (BA)</option>
+                            <option value="btech">Bachelor of Technology (B.Tech)</option>
+                            <option value="bpharm">Bachelor of Pharmacy (B.pharm)</option>
+                            <option value="hnd">Higer National Diploma (HND)</option>
+                            <option value="ond">Ordinary National Diploma (OND)</option>
+                            <option value="msc">Master of Science (M.sc)</option>
+                            <option value="ma">Master of Arts (MA)</option>
+                            <option value="mba">Master of Business Administration (MBA)</option>
+                            <option value="dba">Doctor of Business Administration (DBA)</option>
+                            <option value="phd">Doctor of Philosophy (PhD)</option>
+                            <option value="mbbs">Doctor of Medicine (M.B.B.S)</option>
+                            <option value="dpharm">Doctor of Pharmacy (D.Pharm)</option>
                         </select>
-                    </div>
+                        <select name="years-of-experience">
+                            <option value="0">--Years of relevant experience: (in position being applied for)--</option>
+                            <option value="none">None</option>
+                            <option value="less-than-1">Less than 1 year</option>
+                            <option value="1-year">1 year</option>
+                            <option value="2-year">2 years</option>
+                            <option value="3-year">3 years</option>
+                            <option value="4-year">4 years</option>
+                            <option value="5-year">5 years</option>
+                            <option value="6+year">6+ years</option>
+                        </select>
 
-                    <p>Notice Period: (When can you resume)</p>
-                    <div class="notice-period-wrap">
-                        <span class="notice-period">
-                            <input type="checkbox" name="notice-period-immediately" value="Immediately" id="Immediately">
-                            <label for="Immediately" class="label"><i class="far fa-square"></i>Immediately</label>
-                        </span>
+                        <div class="clearfix">
+                            <div class="left-form-element" >
+                                <input type="text" name="current-employer" placeholder="Current Employer">
+                            </div>
+                            <div class="right-form-element">
+                                <input type="text" name="location" placeholder="Location">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" name="present-job-title" placeholder="Present Job Title (required)">
+                        </div>
+                        <div>
+                            <textarea maxlength="250" name="achievements" placeholder="Achievements"></textarea>
+                        </div>
 
-                        <span class="notice-period">
-                            <input type="checkbox" name="notice-period-two-weeks" value="2 weeks" id="2 weeks">
-                            <label for="2 weeks" class="label"><i class="far fa-square"></i>2 weeks</label>
-                        </span>
+                        <div class="keyup-count">250</div>
 
-                        <span class="notice-period">
-                            <input type="checkbox" name="notice-period-one-month" value="1 month" id="1 month">
-                            <label for="1 month" class="label"><i class="far fa-square"></i>1 month</label>
-                        </span>
+                        <div>
+                            <select name="current-salary">
+                                <option value="0">--Current Annual Salary (in NGN)--</option>
+                                <option value="less-than-100,000">Less than 100,000 p.a</option>
+                                <option value="100,001-150,000">100,001 - 150,000 p.a</option>
+                                <option value="150,001-200,000">150,001 - 200,000 p.a</option>
+                                <option value="200,001-250,001">200,001 - 250,001 p.a</option>
+                                <option value="250,001-300,001">250,001 - 300,001 p.a</option>
+                                <option value="250,001-300,00">250,001 - 300,001 p.a</option>
+                                <option value="250,001-300,001">250,001 - 300,001 p.a</option>
+                                <option value="300,001-400,001">300,001 - 400,001 p.a</option>
+                                <option value="400,001-500,001">400,001 - 500,001 p.a</option>
+                                <option value="500,001-600,001">500,001 - 600,001 p.a</option>
+                                <option value="600,001-700,001">600,001 - 700,001 p.a</option>
+                                <option value="700,001-800,001">700,001 - 800,001 p.a</option>
+                                <option value="800,001-900,001">800,001 - 900,001 p.a</option>
+                                <option value="900,001-10,000,000">900,001 - 10,000,001 p.a</option>
+                                <option value="10,000,001-12,000,001">10,000,001 - 12,000,001 p.a</option>
+                                <option value="12,000,001-15,000,001">12,000,001 - 15,000,001 p.a</option>
+                                <option value="15,000,001-and-above">15,000,001 and above p.a</option>
+                            </select>
+                        </div>
 
-                        <span class="notice-period">
-                            <input type="checkbox" name="notice-period-two-month" value="2 months" id="2 months">
-                            <label for="2 months" class="label"><i class="far fa-square"></i>2 months</label>
-                        </span>
-                    </div>
+                        <p>Notice Period: (When can you resume)</p>
+                        <div class="notice-period-wrap">
+                            <span class="notice-period">
+                                <input type="checkbox" name="notice-period" value="Immediately" id="Immediately">
+                                <label for="Immediately">Immediately</label>
+                            </span>
+                            <span class="notice-period">
+                                <input type="checkbox" name="notice-period" value="2-week" id="2-week">
+                                <label for="2-week">2 weeks</label>
+                            </span>
+                            <span class="notice-period">
+                                <input type="checkbox" name="notice-period" value="1-month" id="1-month">
+                                <label for="1-month">1 month</label>
+                            </span>
+                            <span class="notice-period">
+                                <input type="checkbox" name="notice-period" value="2-month" id="2-month">
+                                <label for="2-month">2 months</label>
+                            </span>
+                        </div>
+                    </section>
 
                     <!-- Attachment info -->
-                    <p><strong>ATTACHMENT INFORMATION</strong></p>
-                    <div class="attachment-wrap">
-                        <div class="attachment">
-                            <div>Attach your CV</div>
-                            <input type="file" name="cv" value="cv">
+                    <section>
+                        <h2>Attachment Information</h2>
+                        <div class="attachment-wrap">
+                            <div class="attachment">
+                                <label for="cv">Attach your CV</label>
+                                <input type="file" id="cv" name="cv">
+                            </div>
+                            <div class="attachment">
+                                <label for="cover-letter">Attach Cover Letter</label>
+                                <input type="file" id="cover-letter" name="cover-letter">
+                            </div>
                         </div>
-                        <div class="attachment">
-                            <div>Attach Cover Letter</div>
-                            <input type="file" name="cover-letter" value="cover letter">
+                        <div class="privacy-wrap">
+                            <input type="checkbox" name="privacyCheckbox" value="1" id="privacy-checkbox">
+                            <label for="privacy-checkbox" class="privacy-notice">I agree to <a href="#">Privacy Notice</a></label>
                         </div>
-                    </div>
-
-                    <div class="privacy-wrap">
-                        <input type="checkbox" name="privacyCheckbox" value="1" id="privacy-checkbox">
-                        <label for="privacy-checkbox" class="privacy-notice">I agree to <a href="#">Privacy Notice</a></label>
-                    </div>
-
-                    <input type="submit" value="Submit Applications" disabled>
-
+                        <input type="submit" value="Submit Applications" disabled>
+                    </section>
                 </form>
             </div>
-        </section>
+        </article>
     </main>
 
     <!-- // Footer and contact info -->
@@ -292,22 +317,23 @@
         <!-- Sub-footer one -->
         <div  class="subfooter-one-wrap">
             <div  class="subfooter-one">
-
                 <!-- Company's profile -->
                 <div class="col-4">
-                    <h4>Our Company</h4>
+                    <h3>Our Company</h3>
                     <p>Buffer Media is transforming the way brands reach and talk to consumers, to drive meaningful engagements at incredible scale.
                        We enable monetization of mobile content (games, movies, apps), in Nigeria, and helps mobile subcribers locate amazing products, services & apps via mobile advertising.
                     </p>
                 </div>
-
                 <!-- Footer's search, address and mail contacts -->
                 <div class="col-5">
                     <div class="footer-search">
-                        <h4>Search Something</h4>
-                        <form  class="footer-form" action="index.html" method="post">
-                            <input id="demo" type="text" name="footer-search-input" placeholder="search...">
-                            <i class="fas fa-search footer-search-icon" aria-hidden="true"></i>
+                        <h3>Search Something</h3>
+                        <form class="footer-form" name="footer-form" role="search" action="index.html" method="post">
+                            <input type="search" name="footer-search" placeholder="search..." aria-label="Search through site content">
+                            <button class="footer-search-btn" type="submit" name="footer-search-btn">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <span class="screen-reader">Submit search query</span>
+                            </button>
                         </form>
                         <div class="mail-ft-contacts">
                             <i class="fas fa-home" aria-hidden="true"></i>
@@ -326,47 +352,39 @@
 
                 <!-- Footer's social media contacts -->
                 <div class="col-3">
-                    <div class="tooltip">
-                        <a class="social-ft-contact email" href="mailto:info@buffermedia.ng"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    <a class="tooltip email" href="mailto:info@buffermedia.ng">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span class="tooltiptext">Email</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact facebook" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip facebook" href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         <span class="tooltiptext">Facebook</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact twitter" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip twitter" href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
                         <span class="tooltiptext">Twitter</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact google" href="https://www.plus.google.com" target="_blank"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip google" href="https://www.plus.google.com" target="_blank">
+                        <i class="fab fa-google-plus-g" aria-hidden="true"></i>
                         <span class="tooltiptext">Google+</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact linkedin" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip linkedin" href="https://www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                         <span class="tooltiptext">LinkedIn</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact youtube" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip youtube" href="https://www.youtube.com" target="_blank">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
                         <span class="tooltiptext">Youtube</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact instagram" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip instagram" href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                         <span class="tooltiptext">Instagram</span>
-                    </div>
-
-                    <div class="tooltip">
-                        <a class="social-ft-contact skype" href="https://www.skype.com" target="_blank"><i class="fab fa-skype" aria-hidden="true"></i></a>
+                    </a>
+                    <a class="tooltip skype" href="https://www.skype.com" target="_blank">
+                        <i class="fab fa-skype" aria-hidden="true"></i>
                         <span class="tooltiptext">Skype</span>
-                    </div>
+                    </a>
                 </div>
-
             </div>
         </div>
 
@@ -375,16 +393,15 @@
             <div class="subfooter-two">
 
                 <!-- Bottom navigation -->
-                <nav class="bottom-nav">
+                <div class="bottom-nav">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
-                </nav>
+                </div>
                 <div class="copyright">Copyright 2016 &copy; Buffer Media All rights reserved.</div>
-
             </div>
         </div>
         <a class="to-top" href="#" title="Back to top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
