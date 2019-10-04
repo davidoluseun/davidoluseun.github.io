@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel=stylesheet href="css/style.min.css">
-    <script src="scripts/buffer.min.js" defer></script>
+    <link rel=stylesheet href="css/style.css">
+    <script src="scripts/buffer.js" defer></script>
 </head>
 
 <body>
@@ -103,211 +103,215 @@
                 </nav>
             </div>
         </div>
-
-        <!-- Sub-header three -->
-        <div class="sub-hd-three-wrap">
-            <div class="sub-hd-three">
-                <h1>Job Application Form</h1>
-            </div>
-        </div>
     </header>
 
     <!-- // Main form fills -->
-    <main class="main-form-wrap">
-        <article class="main-form">
-            <div class="col-8">
-                <form name="mainForm" action="index.html" method="post">
-                    <h2>Position</h2>
-                    <!-- Position -->
-                    <select name="application-position">
-                        <option value="0">--Position Applying for--</option>
-                        <option value="sale-and-partnership-manager">Sale & Partnership Manager</option>
-                        <option value="application-developer">Application Developer</option>
-                        <option value="it-intern">IT Intern</option>
-                        <option value="digital-marketing-intern">Social Media & Digital Marketing Intern</option>
-                        <option value="digital-marketing-manager">Digital Marketing Manager</option>
-                        <option value="account-executive">Account Executive</option>
-                    </select>
+    <main>
+        <article>
+          <!-- article  header -->
+            <header class="article-header">
+                <div class="masthead">
+                    <h1>Job Application Form</h1>
+                </div>
+            </header>
+            <div class="main-form-wrap">
+                <div  class="main-form">
+                  <div class="col-8">
+                      <form name="mainForm" action="index.html" method="post">
+                          <!-- Position -->
+                          <section>
+                              <h2>Position</h2>
+                              <select name="application-position">
+                                  <option value="0">--Position Applying for--</option>
+                                  <option value="sale-and-partnership-manager">Sale & Partnership Manager</option>
+                                  <option value="application-developer">Application Developer</option>
+                                  <option value="it-intern">IT Intern</option>
+                                  <option value="digital-marketing-intern">Social Media & Digital Marketing Intern</option>
+                                  <option value="digital-marketing-manager">Digital Marketing Manager</option>
+                                  <option value="account-executive">Account Executive</option>
+                              </select>
+                          </section>
+                          <!-- Basic info -->
+                          <section>
+                              <h2>Basic info</h2>
+                              <div class="clearfix">
+                                  <span class="left-form-element">
+                                      <input type="text" name="surname" placeholder="Surname">
+                                  </span>
+                                  <span class="right-form-element">
+                                      <input type="text" name="other-names" placeholder="Other Names">
+                                  </span>
+                                  <span class="left-form-element">
+                                      <select name="sex">
+                                          <option value="0">--Sex--</option>
+                                          <option value="male">Male</option>
+                                          <option value="female">Female</option>
+                                      </select>
+                                  </span>
+                                  <span class="right-form-element">
+                                      <select name="marital-status">
+                                          <option value="0">--Marital Status--</option>
+                                          <option value="single">Single</option>
+                                          <option value="married">Married</option>
+                                          <option value="seperated">Seperated</option>
+                                          <option value="widowed">Widowed</option>
+                                      </select>
+                                  </span>
+                              </div>
+                              <label for="dob" class="dob-label">Date of Birth :</label><br>
+                              <input type="date" name="date-of-birth" id="dob">
+                          </section>
 
-                    <!-- Basic info -->
-                    <section>
-                        <h2>Basic info</h2>
-                        <div class="clearfix">
-                            <span class="left-form-element">
-                                <input type="text" name="surname" placeholder="Surname">
-                            </span>
-                            <span class="right-form-element">
-                                <input type="text" name="other-names" placeholder="Other Names">
-                            </span>
-                            <span class="left-form-element">
-                                <select name="sex">
-                                    <option value="0">--Sex--</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-                            </span>
-                            <span class="right-form-element">
-                                <select name="marital-status">
-                                    <option value="0">--Marital Status--</option>
-                                    <option value="single">Single</option>
-                                    <option value="married">Married</option>
-                                    <option value="seperated">Seperated</option>
-                                    <option value="widowed">Widowed</option>
-                                </select>
-                            </span>
-                        </div>
-                        <label for="dob" class="dob-label">Date of Birth :</label><br>
-                        <input type="date" name="date-of-birth" id="dob">
-                    </section>
+                          <!-- Contact info -->
+                          <section>
+                              <h2>Contact Information</h2>
+                              <input type="text" name="address1" placeholder="Address (Line 1)">
+                              <input type="text" name="address2" placeholder="Address (Line 2)">
 
-                    <!-- Contact info -->
-                    <section>
-                        <h2>Contact Information</h2>
-                        <input type="text" name="address1" placeholder="Address (Line 1)">
-                        <input type="text" name="address2" placeholder="Address (Line 2)">
+                              <div class="clearfix">
+                                  <div class="left-form-element">
+                                      <select name="country">
+                                          <option value="0">--Country--</option>
+                                          <option value="nigeria">Nigeria</option>
+                                          <option value="south africa">South Africa</option>
+                                          <option value="ghana">Ghana</option>
+                                          <option value="niger">Niger</option>
+                                      </select>
+                                  </div>
 
-                        <div class="clearfix">
-                            <div class="left-form-element">
-                                <select name="country">
-                                    <option value="0">--Country--</option>
-                                    <option value="nigeria">Nigeria</option>
-                                    <option value="south africa">South Africa</option>
-                                    <option value="ghana">Ghana</option>
-                                    <option value="niger">Niger</option>
-                                </select>
-                            </div>
+                                  <div class="right-form-element">
+                                      <input type="text" name="state" placeholder="State">
+                                  </div>
+                                  <div class="left-form-element">
+                                      <input type="email" name="email" placeholder="Email">
+                                  </div>
+                                  <div class="right-form-element">
+                                      <input type="email" name="confirm-email" placeholder="Confirm Email">
+                                  </div>
+                                  <div class="left-form-element">
+                                      <input type="tel" name="phone-number" placeholder="Mobile Number">
+                                  </div>
+                                  <div class="right-form-element">
+                                      <input type="tel" name="alt-phone-number" placeholder="Alternative Number">
+                                  </div>
+                              </div>
+                          </section>
 
-                            <div class="right-form-element">
-                                <input type="text" name="state" placeholder="State">
-                            </div>
-                            <div class="left-form-element">
-                                <input type="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="right-form-element">
-                                <input type="email" name="confirm-email" placeholder="Confirm Email">
-                            </div>
-                            <div class="left-form-element">
-                                <input type="tel" name="phone-number" placeholder="Mobile Number">
-                            </div>
-                            <div class="right-form-element">
-                                <input type="tel" name="alt-phone-number" placeholder="Alternative Number">
-                            </div>
-                        </div>
-                    </section>
+                          <!-- Professional Details -->
+                          <section>
+                              <h2>Professional Details</h2>
+                              <select name="professional-details">
+                                  <option value="0">--Highest Qualification Held--</option>
+                                  <option value="none">None</option>
+                                  <option value="bsc">Bachelor of Science (B.sc)</option>
+                                  <option value="ba">Bachelor of Arts (BA)</option>
+                                  <option value="btech">Bachelor of Technology (B.Tech)</option>
+                                  <option value="bpharm">Bachelor of Pharmacy (B.pharm)</option>
+                                  <option value="hnd">Higer National Diploma (HND)</option>
+                                  <option value="ond">Ordinary National Diploma (OND)</option>
+                                  <option value="msc">Master of Science (M.sc)</option>
+                                  <option value="ma">Master of Arts (MA)</option>
+                                  <option value="mba">Master of Business Administration (MBA)</option>
+                                  <option value="dba">Doctor of Business Administration (DBA)</option>
+                                  <option value="phd">Doctor of Philosophy (PhD)</option>
+                                  <option value="mbbs">Doctor of Medicine (M.B.B.S)</option>
+                                  <option value="dpharm">Doctor of Pharmacy (D.Pharm)</option>
+                              </select>
+                              <select name="years-of-experience">
+                                  <option value="0">--Years of relevant experience: (in position being applied for)--</option>
+                                  <option value="none">None</option>
+                                  <option value="less-than-1">Less than 1 year</option>
+                                  <option value="1-year">1 year</option>
+                                  <option value="2-year">2 years</option>
+                                  <option value="3-year">3 years</option>
+                                  <option value="4-year">4 years</option>
+                                  <option value="5-year">5 years</option>
+                                  <option value="6+year">6+ years</option>
+                              </select>
 
-                    <!-- Professional Details -->
-                    <section>
-                        <h2>Professional Details</h2>
-                        <select name="professional-details">
-                            <option value="0">--Highest Qualification Held--</option>
-                            <option value="none">None</option>
-                            <option value="bsc">Bachelor of Science (B.sc)</option>
-                            <option value="ba">Bachelor of Arts (BA)</option>
-                            <option value="btech">Bachelor of Technology (B.Tech)</option>
-                            <option value="bpharm">Bachelor of Pharmacy (B.pharm)</option>
-                            <option value="hnd">Higer National Diploma (HND)</option>
-                            <option value="ond">Ordinary National Diploma (OND)</option>
-                            <option value="msc">Master of Science (M.sc)</option>
-                            <option value="ma">Master of Arts (MA)</option>
-                            <option value="mba">Master of Business Administration (MBA)</option>
-                            <option value="dba">Doctor of Business Administration (DBA)</option>
-                            <option value="phd">Doctor of Philosophy (PhD)</option>
-                            <option value="mbbs">Doctor of Medicine (M.B.B.S)</option>
-                            <option value="dpharm">Doctor of Pharmacy (D.Pharm)</option>
-                        </select>
-                        <select name="years-of-experience">
-                            <option value="0">--Years of relevant experience: (in position being applied for)--</option>
-                            <option value="none">None</option>
-                            <option value="less-than-1">Less than 1 year</option>
-                            <option value="1-year">1 year</option>
-                            <option value="2-year">2 years</option>
-                            <option value="3-year">3 years</option>
-                            <option value="4-year">4 years</option>
-                            <option value="5-year">5 years</option>
-                            <option value="6+year">6+ years</option>
-                        </select>
+                              <div class="clearfix">
+                                  <div class="left-form-element" >
+                                      <input type="text" name="current-employer" placeholder="Current Employer">
+                                  </div>
+                                  <div class="right-form-element">
+                                      <input type="text" name="location" placeholder="Location">
+                                  </div>
+                              </div>
+                              <div>
+                                  <input type="text" name="present-job-title" placeholder="Present Job Title (required)">
+                              </div>
+                              <div>
+                                  <textarea maxlength="250" name="achievements" placeholder="Achievements"></textarea>
+                              </div>
 
-                        <div class="clearfix">
-                            <div class="left-form-element" >
-                                <input type="text" name="current-employer" placeholder="Current Employer">
-                            </div>
-                            <div class="right-form-element">
-                                <input type="text" name="location" placeholder="Location">
-                            </div>
-                        </div>
-                        <div>
-                            <input type="text" name="present-job-title" placeholder="Present Job Title (required)">
-                        </div>
-                        <div>
-                            <textarea maxlength="250" name="achievements" placeholder="Achievements"></textarea>
-                        </div>
+                              <div class="keyup-count">250</div>
 
-                        <div class="keyup-count">250</div>
+                              <div>
+                                  <select name="current-salary">
+                                      <option value="0">--Current Annual Salary (in NGN)--</option>
+                                      <option value="less-than-100,000">Less than 100,000 p.a</option>
+                                      <option value="100,001-150,000">100,001 - 150,000 p.a</option>
+                                      <option value="150,001-200,000">150,001 - 200,000 p.a</option>
+                                      <option value="200,001-250,001">200,001 - 250,001 p.a</option>
+                                      <option value="250,001-300,001">250,001 - 300,001 p.a</option>
+                                      <option value="250,001-300,00">250,001 - 300,001 p.a</option>
+                                      <option value="250,001-300,001">250,001 - 300,001 p.a</option>
+                                      <option value="300,001-400,001">300,001 - 400,001 p.a</option>
+                                      <option value="400,001-500,001">400,001 - 500,001 p.a</option>
+                                      <option value="500,001-600,001">500,001 - 600,001 p.a</option>
+                                      <option value="600,001-700,001">600,001 - 700,001 p.a</option>
+                                      <option value="700,001-800,001">700,001 - 800,001 p.a</option>
+                                      <option value="800,001-900,001">800,001 - 900,001 p.a</option>
+                                      <option value="900,001-10,000,000">900,001 - 10,000,001 p.a</option>
+                                      <option value="10,000,001-12,000,001">10,000,001 - 12,000,001 p.a</option>
+                                      <option value="12,000,001-15,000,001">12,000,001 - 15,000,001 p.a</option>
+                                      <option value="15,000,001-and-above">15,000,001 and above p.a</option>
+                                  </select>
+                              </div>
 
-                        <div>
-                            <select name="current-salary">
-                                <option value="0">--Current Annual Salary (in NGN)--</option>
-                                <option value="less-than-100,000">Less than 100,000 p.a</option>
-                                <option value="100,001-150,000">100,001 - 150,000 p.a</option>
-                                <option value="150,001-200,000">150,001 - 200,000 p.a</option>
-                                <option value="200,001-250,001">200,001 - 250,001 p.a</option>
-                                <option value="250,001-300,001">250,001 - 300,001 p.a</option>
-                                <option value="250,001-300,00">250,001 - 300,001 p.a</option>
-                                <option value="250,001-300,001">250,001 - 300,001 p.a</option>
-                                <option value="300,001-400,001">300,001 - 400,001 p.a</option>
-                                <option value="400,001-500,001">400,001 - 500,001 p.a</option>
-                                <option value="500,001-600,001">500,001 - 600,001 p.a</option>
-                                <option value="600,001-700,001">600,001 - 700,001 p.a</option>
-                                <option value="700,001-800,001">700,001 - 800,001 p.a</option>
-                                <option value="800,001-900,001">800,001 - 900,001 p.a</option>
-                                <option value="900,001-10,000,000">900,001 - 10,000,001 p.a</option>
-                                <option value="10,000,001-12,000,001">10,000,001 - 12,000,001 p.a</option>
-                                <option value="12,000,001-15,000,001">12,000,001 - 15,000,001 p.a</option>
-                                <option value="15,000,001-and-above">15,000,001 and above p.a</option>
-                            </select>
-                        </div>
+                              <p>Notice Period: (When can you resume)</p>
+                              <div class="notice-period-wrap">
+                                  <span class="notice-period">
+                                      <input type="checkbox" name="notice-period" value="Immediately" id="Immediately">
+                                      <label for="Immediately">Immediately</label>
+                                  </span>
+                                  <span class="notice-period">
+                                      <input type="checkbox" name="notice-period" value="2-week" id="2-week">
+                                      <label for="2-week">2 weeks</label>
+                                  </span>
+                                  <span class="notice-period">
+                                      <input type="checkbox" name="notice-period" value="1-month" id="1-month">
+                                      <label for="1-month">1 month</label>
+                                  </span>
+                                  <span class="notice-period">
+                                      <input type="checkbox" name="notice-period" value="2-month" id="2-month">
+                                      <label for="2-month">2 months</label>
+                                  </span>
+                              </div>
+                          </section>
 
-                        <p>Notice Period: (When can you resume)</p>
-                        <div class="notice-period-wrap">
-                            <span class="notice-period">
-                                <input type="checkbox" name="notice-period" value="Immediately" id="Immediately">
-                                <label for="Immediately">Immediately</label>
-                            </span>
-                            <span class="notice-period">
-                                <input type="checkbox" name="notice-period" value="2-week" id="2-week">
-                                <label for="2-week">2 weeks</label>
-                            </span>
-                            <span class="notice-period">
-                                <input type="checkbox" name="notice-period" value="1-month" id="1-month">
-                                <label for="1-month">1 month</label>
-                            </span>
-                            <span class="notice-period">
-                                <input type="checkbox" name="notice-period" value="2-month" id="2-month">
-                                <label for="2-month">2 months</label>
-                            </span>
-                        </div>
-                    </section>
-
-                    <!-- Attachment info -->
-                    <section>
-                        <h2>Attachment Information</h2>
-                        <div class="attachment-wrap">
-                            <div class="attachment">
-                                <label for="cv">Attach your CV</label>
-                                <input type="file" id="cv" name="cv">
-                            </div>
-                            <div class="attachment">
-                                <label for="cover-letter">Attach Cover Letter</label>
-                                <input type="file" id="cover-letter" name="cover-letter">
-                            </div>
-                        </div>
-                        <div class="privacy-wrap">
-                            <input type="checkbox" name="privacyCheckbox" value="1" id="privacy-checkbox">
-                            <label for="privacy-checkbox" class="privacy-notice">I agree to <a href="#">Privacy Notice</a></label>
-                        </div>
-                        <input type="submit" value="Submit Applications" disabled>
-                    </section>
-                </form>
+                          <!-- Attachment info -->
+                          <section>
+                              <h2>Attachment Information</h2>
+                              <div class="attachment-wrap">
+                                  <div class="attachment">
+                                      <label for="cv">Attach your CV</label>
+                                      <input type="file" id="cv" name="cv">
+                                  </div>
+                                  <div class="attachment">
+                                      <label for="cover-letter">Attach Cover Letter</label>
+                                      <input type="file" id="cover-letter" name="cover-letter">
+                                  </div>
+                              </div>
+                              <div class="privacy-wrap">
+                                  <input type="checkbox" name="privacyCheckbox" value="1" id="privacy-checkbox">
+                                  <label for="privacy-checkbox" class="privacy-notice">I agree to <a href="#">Privacy Notice</a></label>
+                              </div>
+                              <input type="submit" value="Submit Applications" disabled>
+                          </section>
+                      </form>
+                  </div>
+              </div>
             </div>
         </article>
     </main>
@@ -318,14 +322,14 @@
         <div  class="subfooter-one-wrap">
             <div  class="subfooter-one">
                 <!-- Company's profile -->
-                <div class="col-4">
+                <section class="col-4">
                     <h3>Our Company</h3>
                     <p>Buffer Media is transforming the way brands reach and talk to consumers, to drive meaningful engagements at incredible scale.
                        We enable monetization of mobile content (games, movies, apps), in Nigeria, and helps mobile subcribers locate amazing products, services & apps via mobile advertising.
                     </p>
-                </div>
+                </section>
                 <!-- Footer's search, address and mail contacts -->
-                <div class="col-5">
+                <section class="col-5">
                     <div class="footer-search">
                         <h3>Search Something</h3>
                         <form class="footer-form" name="footer-form" role="search" action="index.html" method="get">
@@ -348,7 +352,7 @@
                             <h4>sales@buffer.media</h4>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- Footer's social media contacts -->
                 <div class="col-3">

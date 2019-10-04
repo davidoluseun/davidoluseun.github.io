@@ -40,7 +40,7 @@ h4 {
 }
 .header-contact,
 .sub-hd-two,
-.sub-hd-three,
+.masthead,
 .main-form,
 .subfooter-one,
 .subfooter-two {
@@ -246,11 +246,11 @@ header {
 }
 
 /* Sub-header three style */
-.sub-hd-three-wrap {
+.article-header {
   background: #f5f5f5;
   padding: 25px;
 }
-.sub-hd-three h1 {
+.masthead h1 {
   font-size: 30px;
   text-align: center;
   margin: 0;
@@ -260,9 +260,6 @@ header {
 -------------------------*/
 .main-form-wrap {
   padding: 25px;
-}
-.main-form {
-  padding: 2px;
   color: #424242;
 }
 .keyup-count {
@@ -571,7 +568,7 @@ input[type="submit"]:focus {
 /*Media Queries Style
 -----------------------------*/
 @media (min-width: 601px) {
-  .sub-hd-three-wrap,
+  .article-header,
   .main-form-wrap {
     padding: 40px;
   }
@@ -656,7 +653,7 @@ input[type="submit"]:focus {
   h3 {
     font-size: 24px;
   }
-  .sub-hd-three h1 {
+  .masthead h1 {
     font-size: 40px;
   }
   .main-form {
@@ -756,7 +753,7 @@ input[type="submit"]:focus {
     padding: 21px;
     box-shadow: none;
   }
-  .sub-hd-three-wrap {
+  .article-header {
     padding-top: 70px;
     padding-bottom: 70px;
   }
